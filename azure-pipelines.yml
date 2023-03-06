@@ -12,8 +12,8 @@ pool:
 steps:
 settings
 
- task:AzureResourceManagerTemplateDeployment@3
-  inputs:
+- task:AzureResourceManagerTemplateDeployment@3
+  inputs
    deploymentScope:'Resource Group'
     azureResourceManagerConnection:'AzurePipeline-conn'
     subscriptionId:''
