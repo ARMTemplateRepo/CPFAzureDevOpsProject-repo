@@ -12,9 +12,9 @@ pool:
 steps:
 settings
 
-- task:AzureResourceManagerTemplateDeployment@3
+  task:AzureResourceManagerTemplateDeployment@3
   inputs
-   deploymentScope:'Resource Group'
+    deploymentScope:'Resource Group'
     azureResourceManagerConnection:'AzurePipeline-conn'
     subscriptionId:''
     action:'Create or Update resource Group'
