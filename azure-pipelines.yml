@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'CPF_Test'
     location: 'Southeast Asia'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/ARMTemplateRepo/CPFAzureDevOpsProject-repo/main/CreateWebApp/template.json'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/ARMTemplateRepo/CPFAzureDevOpsProject-repo/main/CreateWebApp/parameters.json'
+    csmFileLink: 'CreateWebApp/template.json'
+    csmParametersFileLink: 'CreateWebApp/parameters.json'
     deploymentMode: 'Incremental'
