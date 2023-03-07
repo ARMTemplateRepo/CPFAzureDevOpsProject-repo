@@ -13,13 +13,12 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'AzurePipeline-conn'
+    azureResourceManagerConnection: 'AzureRmPipeline-conn'
     subscriptionId: 'b27b997e-6e17-4823-b0b6-0d6dd472cf27'
-    action: 'Create or Update resource Group'
+    action: 'Create Or Update Resource Group'
     resourceGroupName: 'CPF_Test'
-    location: 'southeastasia'
+    location: 'Southeast Asia'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/ARMTemplateRepo/CPFAzureDevOpsProject-repo/main/CreateWebApp/template.json'
-    overrideParameters: '-projectName CPFAzureDevOpsProject'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/ARMTemplateRepo/CPFAzureDevOpsProject-repo/main/CreateWebApp/parameters.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'DeployPipelineTemplate'
