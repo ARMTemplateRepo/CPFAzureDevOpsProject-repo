@@ -10,17 +10,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-settings
-- task:AzureResourceManagerTemplateDeployment@3
-  inputs
-    deploymentScope:'Resource Group'
-    azureResourceManagerConnection:'AzurePipeline-conn'
-    subscriptionId:''
-    action:'Create or Update resource Group'
-    resourceGroupName:'CPF_Test'
-    location:'southeastasia'
-    templateLocation:'Url of the file'
-    csmFileLink:'https://raw.githubusercontent.com/ARMTemplateRepo/CPFAzureDevOpsProject-repo/main/CreateWebApp/template.json'
-    overrideParameter:'-projectName CPFAzureDevOpsProject'
-    deploymentMode:'Incremental'
-    deployementName:'DeployPipelineTemplate'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzurePipeline-conn'
+    subscriptionId: 'b27b997e-6e17-4823-b0b6-0d6dd472cf27'
+    action: 'Create or Update resource Group'
+    resourceGroupName: 'CPF_Test'
+    location: 'southeastasia'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/ARMTemplateRepo/CPFAzureDevOpsProject-repo/main/CreateWebApp/template.json'
+    overrideParameters: '-projectName CPFAzureDevOpsProject'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
